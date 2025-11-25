@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 100%;
+}
+
+.history {
+    background: #2d2d2d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #888;
+    font-size: 0.9em;
+    min-height: 40px;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.display {
+    background: #2d2d2d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+#result {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.2em;
+    width: 100%;
+    text-align: right;
+    outline: none;
+    font-weight: 300;
+}
+
+.mode-indicator {
+    color: #e67e22;
+    font-size: 0.8em;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background: #2d2d2d;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #3d3d3d;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.number {
+    background: #333;
+}
+
+.number:hover {
+    background: #444;
+}
+
+.operator {
+    background: #e67e22;
+}
+
+.operator:hover {
+    background: #f39c12;
+}
+
+.function {
+    background: #34495e;
+    font-size: 1em;
+}
+
+.function:hover {
+    background: #4a6278;
+}
+
+.equals {
+    background: #27ae60;
+}
+
+.equals:hover {
+    background: #2ecc71;
+}
+
+.clear {
+    background: #e74c3c;
+}
+
+.clear:hover {
+    background: #c0392b;
+}
+
+.delete {
+    background: #d35400;
+}
+
+.delete:hover {
+    background: #e67e22;
+}
+
+.constant {
+    background: #8e44ad;
+}
+
+.constant:hover {
+    background: #9b59b6;
+}
+
+.active-mode {
+    background: #e67e22 !important;
+    color: white !important;
+}
+
+@media (max-width: 450px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    .btn {
+        padding: 12px 3px;
+        font-size: 1em;
+    }
+    
+    #result {
+        font-size: 1.8em;
+    }
+}

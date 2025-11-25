@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="history" id="history"></div>
+        <div class="display">
+            <div class="mode-indicator">
+                <span id="angleModeIndicator">DEG</span> | 
+                <span id="invModeIndicator">REG</span>
+            </div>
+            <input type="text" id="result" readonly value="0">
+        </div>
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button class="btn function" onclick="addFunction('sin')">sin</button>
+            <button class="btn function" onclick="addFunction('cos')">cos</button>
+            <button class="btn function" onclick="addFunction('tan')">tan</button>
+            <button class="btn function" id="radBtn" onclick="setAngleMode('rad')">rad</button>
+            <button class="btn function active-mode" id="degBtn" onclick="setAngleMode('deg')">deg</button>
+            
+            <!-- Row 2 -->
+            <button class="btn function" onclick="addFunction('log')">log</button>
+            <button class="btn function" onclick="addFunction('ln')">ln</button>
+            <button class="btn function" onclick="appendToDisplay('(')">(</button>
+            <button class="btn function" onclick="appendToDisplay(')')">)</button>
+            <button class="btn function" id="invBtn" onclick="toggleInverse()">inv</button>
+            
+            <!-- Row 3 -->
+            <button class="btn function" onclick="addFunction('factorial')">!</button>
+            <button class="btn clear" onclick="clearAll()">AC</button>
+            <button class="btn delete" onclick="deleteLast()">DEL</button>
+            <button class="btn function" onclick="addPercentage()">%</button>
+            <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+            
+            <!-- Row 4 -->
+            <button class="btn function" onclick="addPower()">^</button>
+            <button class="btn number" onclick="appendToDisplay('7')">7</button>
+            <button class="btn number" onclick="appendToDisplay('8')">8</button>
+            <button class="btn number" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+            
+            <!-- Row 5 -->
+            <button class="btn function" onclick="addFunction('sqrt')">√</button>
+            <button class="btn number" onclick="appendToDisplay('4')">4</button>
+            <button class="btn number" onclick="appendToDisplay('5')">5</button>
+            <button class="btn number" onclick="appendToDisplay('6')">6</button>
+            <button class="btn operator" onclick="appendToDisplay('-')">–</button>
+            
+            <!-- Row 6 -->
+            <button class="btn constant" onclick="addConstant('pi')">π</button>
+            <button class="btn number" onclick="appendToDisplay('1')">1</button>
+            <button class="btn number" onclick="appendToDisplay('2')">2</button>
+            <button class="btn number" onclick="appendToDisplay('3')">3</button>
+            <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+            
+            <!-- Row 7 -->
+            <button class="btn constant" onclick="addConstant('e')">e</button>
+            <button class="btn number" onclick="appendToDisplay('00')">00</button>
+            <button class="btn number" onclick="appendToDisplay('0')">0</button>
+            <button class="btn number" onclick="appendToDisplay('.')">.</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
