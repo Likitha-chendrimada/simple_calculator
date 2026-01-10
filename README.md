@@ -1,7 +1,7 @@
 A Calculator App with both basic and scientific features!
 
 
- 🧮 Key Features of this Calculator :
+ 🧮  Key Features of this Calculator :
  
 Basic operations: +, −, ×, ÷, %, decimals.
 
